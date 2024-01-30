@@ -1,0 +1,59 @@
+.contenedor_general{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.consola{
+    width: 400px;
+    height: 200px;
+    background-color: grey;
+    padding: 10px;
+    
+}
+.selecciones{
+    width: 300px;
+    height: 200px;
+    background-color: dimgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.eleccion{
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    background-color: aliceblue;
+}
+.eleccion:hover{
+    background-color: black;
+    cursor: pointer;
+}
+.tijeras{
+    background-image: url("/src/assets/scissors_3375800.png");
+    background-size: cover;
+}
+.piedra{
+    background-image: url("/src/assets/stone_839307.png");
+    background-size: cover;
+}
+.papel{
+    background-image: url("/src/assets/papers_8213001.png");
+    background-size: cover;
+}
+@media only screen and (max-width:500px) {
+    .consola{
+        width: 300px;
+        height: 200px;
+    }
+}
+@media only screen and (max-width:400px) {
+    .consola{
+        width: 200px;
+        height: 200px;
+    }
+}

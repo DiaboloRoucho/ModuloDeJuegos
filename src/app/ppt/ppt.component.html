@@ -1,0 +1,13 @@
+<div class="contenedor_general">
+    <mat-toolbar color="primary">Piedra, papel o tijeras</mat-toolbar>
+    <div class="consola">
+        {{texto}}<br>
+        {{texto2}}
+    </div>
+    <div class="selecciones">
+        <div (click)="elegir('tijeras')" class="eleccion tijeras"></div>
+        <div (click)="elegir('piedra')" class="eleccion piedra"></div>
+        <div (click)="elegir('papel')" class="eleccion papel"></div>
+
+    </div>
+</div>

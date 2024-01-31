@@ -1,5 +1,6 @@
 <div class="contenedor_general">
     <mat-toolbar color="primary">Piedra, papel o tijeras</mat-toolbar>
+    <div>{{textoF}}</div>
     <div class="consola">
         <div class="resultados">
             <div class="resultado jugador">
@@ -10,6 +11,11 @@
             </div>
         </div>       
         <div class="textoF">{{texto}}</div>
+    </div>
+    <div class="contenedorVidas">
+        <div class="vidas" *ngFor="let vida of  vidas">
+            <img src={{vida.imagen}} alt="10">
+        </div>
     </div>
     <div class="selecciones">
         <div (click)="elegir(2)" class="eleccion tijeras"></div>

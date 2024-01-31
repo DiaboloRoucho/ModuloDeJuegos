@@ -11,7 +11,8 @@ export class PptComponent implements OnInit{
   eleccionesImg:string[]=["/assets/stone_839307.png", "/assets/papers_8213001.png", "/assets/scissors_3375800.png"];
   textoJ:string="";
   textoM:string="";
-  textoF:string=""
+  textoF:string="";
+  textoEmp:String="";
   vidas:vida[]=[new vida("/assets/heart_707680.png"),
   new vida("/assets/heart_707680.png"), 
   new vida("/assets/heart_707680.png"), 
@@ -23,6 +24,13 @@ export class PptComponent implements OnInit{
     this.texto="hola guapo";
     this.textoJ="/assets/waving-hand_9756304.png"
     this.textoM="/assets/waving-hand_9756304.png"
+    this.textoEmp=""
+    this.textoF=""
+    this.vidas=[new vida("/assets/heart_707680.png"),
+    new vida("/assets/heart_707680.png"), 
+    new vida("/assets/heart_707680.png"), 
+    new vida("/assets/heart_707680.png"), 
+    new vida("/assets/heart_707680.png")];
 
   }
   elegir (eleccion:number){
@@ -56,7 +64,13 @@ export class PptComponent implements OnInit{
     }
   }if(this.vidas.length == 0){
         this.textoF = "Perdiste de la hostia"
-      }
+        this.textoEmp = "Volver a jugar"
+    }
+    
+  }
+  volver(){
+
+    this.ngOnInit()
   }
 
   
@@ -67,3 +81,5 @@ class vida{
       this.imagen = i;
   }
 }
+
+

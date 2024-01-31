@@ -58,6 +58,14 @@ img{
     height: 100%;
     width: 100%;
 }
+.volver{
+    animation: parpadeo 1s infinite;
+}
+.volver:hover{
+    cursor: pointer;
+    animation: seleccion .5s forwards;
+}
+
 .selecciones{
     width: 300px;
     height: 200px;

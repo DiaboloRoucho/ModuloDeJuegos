@@ -22,13 +22,18 @@ export class PptComponent implements OnInit{
 
     if(eleccion=="tijeras"&& this.elecciones[eleccionMaquina]=="papel"||
     eleccion=="piedra"&& this.elecciones[eleccionMaquina]=="tijeras"||
-    eleccion=="papel"&& this.elecciones[eleccionMaquina]=="piedra"||){
+    eleccion=="papel"&& this.elecciones[eleccionMaquina]=="piedra"){
       this.texto3="ganaste"
     }
     if(eleccion=="tijeras"&& this.elecciones[eleccionMaquina]=="piedra"||
     eleccion=="piedra"&& this.elecciones[eleccionMaquina]=="papel"||
-    eleccion=="papel"&& this.elecciones[eleccionMaquina]=="tijeras"||){
-      this.texto3="ganaste"
+    eleccion=="papel"&& this.elecciones[eleccionMaquina]=="tijeras"){
+      this.texto3="perdiste"
+    }
+    if(eleccion=="tijeras"&& this.elecciones[eleccionMaquina]=="tijeras"||
+    eleccion=="piedra"&& this.elecciones[eleccionMaquina]=="piedra"||
+    eleccion=="papel"&& this.elecciones[eleccionMaquina]=="papel"){
+      this.texto3="empate"
     }
   }
 

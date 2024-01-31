@@ -7,33 +7,43 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PptComponent implements OnInit{
   texto:string="";
-  elecciones:string[]=["piedra", "papel", "tijeras"]
-  texto2:string=""
-  texto3:string=""
+  elecciones:string[]=["piedra", "papel", "tijeras"];
+  eleccionesImg:string[]=["/assets/stone_839307.png", "/assets/papers_8213001.png", "/assets/scissors_3375800.png"];
+  textoJ:string="";
+  textoM:string="";
+  vidas:number=5;
 
   ngOnInit(): void {
     this.texto="hola guapo";
+    this.textoJ="/assets/waving-hand_9756304.png"
+    this.textoM="/assets/waving-hand_9756304.png"
   }
-  elegir (eleccion:string){
+  elegir (eleccion:number){
     this.texto="elegiste: "+eleccion;
 
     var eleccionMaquina = Math.floor(Math.random()*3);
-    this.texto2 = "La maquina ha elegido: " + eleccionMaquina
 
-    if(eleccion=="tijeras"&& this.elecciones[eleccionMaquina]=="papel"||
-    eleccion=="piedra"&& this.elecciones[eleccionMaquina]=="tijeras"||
-    eleccion=="papel"&& this.elecciones[eleccionMaquina]=="piedra"){
-      this.texto3="ganaste"
+    if(this.elecciones[eleccion]=="tijeras"&& this.elecciones[eleccionMaquina]=="papel"||
+    this.elecciones[eleccion]=="piedra"&& this.elecciones[eleccionMaquina]=="tijeras"||
+    this.elecciones[eleccion]=="papel"&& this.elecciones[eleccionMaquina]=="piedra"){
+      this.textoM=this.eleccionesImg[eleccionMaquina];
+      this.textoJ=this.eleccionesImg[eleccion];
+      this.texto="ganaste";
     }
-    if(eleccion=="tijeras"&& this.elecciones[eleccionMaquina]=="piedra"||
-    eleccion=="piedra"&& this.elecciones[eleccionMaquina]=="papel"||
-    eleccion=="papel"&& this.elecciones[eleccionMaquina]=="tijeras"){
-      this.texto3="perdiste"
+    if(this.elecciones[eleccion]=="tijeras"&& this.elecciones[eleccionMaquina]=="piedra"||
+    this.elecciones[eleccion]=="piedra"&& this.elecciones[eleccionMaquina]=="papel"||
+    this.elecciones[eleccion]=="papel"&& this.elecciones[eleccionMaquina]=="tijeras"){
+      this.textoM=this.eleccionesImg[eleccionMaquina];
+      this.textoJ=this.eleccionesImg[eleccion];
+      this.texto="Perdiste";
+      this.vidas--
     }
-    if(eleccion=="tijeras"&& this.elecciones[eleccionMaquina]=="tijeras"||
-    eleccion=="piedra"&& this.elecciones[eleccionMaquina]=="piedra"||
-    eleccion=="papel"&& this.elecciones[eleccionMaquina]=="papel"){
-      this.texto3="empate"
+    if(this.elecciones[eleccion]=="tijeras"&& this.elecciones[eleccionMaquina]=="tijeras"||
+    this.elecciones[eleccion]=="piedra"&& this.elecciones[eleccionMaquina]=="piedra"||
+    this.elecciones[eleccion]=="papel"&& this.elecciones[eleccionMaquina]=="papel"){
+      this.textoM=this.eleccionesImg[eleccionMaquina];
+      this.textoJ=this.eleccionesImg[eleccion];
+      this.texto="empate";
     }
   }
 

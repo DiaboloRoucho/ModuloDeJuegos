@@ -1,13 +1,20 @@
 <div class="contenedor_general">
     <mat-toolbar color="primary">Piedra, papel o tijeras</mat-toolbar>
     <div class="consola">
-        {{texto}}<br>
-        {{texto2}}
+        <div class="resultados">
+            <div class="resultado jugador">
+                <img src={{textoJ}} alt="10">
+            </div>
+            <div class="resultado maquina">
+                <img src={{textoM}} alt="10">
+            </div>
+        </div>       
+        <div class="textoF">{{texto}}</div>
     </div>
     <div class="selecciones">
-        <div (click)="elegir('tijeras')" class="eleccion tijeras"></div>
-        <div (click)="elegir('piedra')" class="eleccion piedra"></div>
-        <div (click)="elegir('papel')" class="eleccion papel"></div>
+        <div (click)="elegir(2)" class="eleccion tijeras"></div>
+        <div (click)="elegir(0)" class="eleccion piedra"></div>
+        <div (click)="elegir(1)" class="eleccion papel"></div>
 
     </div>
 </div>

@@ -13,11 +13,12 @@ export class PptComponent implements OnInit{
   textoM:string="";
   textoF:string="";
   textoEmp:String="";
-  vidas:vida[]=[new vida("/assets/heart_707680.png"),
+  vidasJ:vida[]=[new vida("/assets/heart_707680.png"),
   new vida("/assets/heart_707680.png"), 
   new vida("/assets/heart_707680.png"), 
   new vida("/assets/heart_707680.png"), 
   new vida("/assets/heart_707680.png")];
+  vidasM:vida[]=[];
   
 
   ngOnInit(): void {
@@ -26,7 +27,12 @@ export class PptComponent implements OnInit{
     this.textoM="/assets/waving-hand_9756304.png"
     this.textoEmp=""
     this.textoF=""
-    this.vidas=[new vida("/assets/heart_707680.png"),
+    this.vidasJ=[new vida("/assets/heart_707680.png"),
+    new vida("/assets/heart_707680.png"), 
+    new vida("/assets/heart_707680.png"), 
+    new vida("/assets/heart_707680.png"), 
+    new vida("/assets/heart_707680.png")];
+    this.vidasM =[new vida("/assets/heart_707680.png"),
     new vida("/assets/heart_707680.png"), 
     new vida("/assets/heart_707680.png"), 
     new vida("/assets/heart_707680.png"), 
@@ -35,7 +41,7 @@ export class PptComponent implements OnInit{
   }
   elegir (eleccion:number){
 
-    if(this.vidas.length!=0){
+    if(this.vidasJ.length!=0){
     var eleccionMaquina = Math.floor(Math.random()*3);
 
     if(this.elecciones[eleccion]=="tijeras"&& this.elecciones[eleccionMaquina]=="papel"||
@@ -44,6 +50,7 @@ export class PptComponent implements OnInit{
       this.textoM=this.eleccionesImg[eleccionMaquina];
       this.textoJ=this.eleccionesImg[eleccion];
       this.texto="ganaste";
+      this.vidasM.pop();
     }
     if(this.elecciones[eleccion]=="tijeras"&& this.elecciones[eleccionMaquina]=="piedra"||
     this.elecciones[eleccion]=="piedra"&& this.elecciones[eleccionMaquina]=="papel"||
@@ -51,7 +58,7 @@ export class PptComponent implements OnInit{
       this.textoM=this.eleccionesImg[eleccionMaquina];
       this.textoJ=this.eleccionesImg[eleccion];
       this.texto="Perdiste";
-      this.vidas.pop();
+      this.vidasJ.pop();
       
       
     }
@@ -62,9 +69,12 @@ export class PptComponent implements OnInit{
       this.textoJ=this.eleccionesImg[eleccion];
       this.texto="empate";
     }
-  }if(this.vidas.length == 0){
+  }if(this.vidasJ.length == 0){
         this.textoF = "Perdiste de la hostia"
         this.textoEmp = "Volver a jugar"
+    }if(this.vidasM.length == 0){
+      this.textoF = "Ganaste de la hostia"
+      this.textoEmp = "Volver a jugar"
     }
     
   }

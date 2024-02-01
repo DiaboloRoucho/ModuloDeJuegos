@@ -13,8 +13,15 @@
         <div class="textoF">{{texto}}</div>
     </div>
     <div class="contenedorVidas">
-        <div class="vidas" *ngFor="let vida of  vidas">
+        <div class="cosa">
+        <div class="vidas j" *ngFor="let vida of  vidasJ">
             <img src={{vida.imagen}} alt="10">
+        </div>
+        </div>
+        <div class="cosa">
+        <div class="vidas j" *ngFor="let vida of  vidasM">
+            <img src={{vida.imagen}} alt="10">
+        </div>
         </div>
     </div>
     <div (click)="volver()" class="volver">

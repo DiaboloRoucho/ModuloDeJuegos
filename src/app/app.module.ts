@@ -7,13 +7,17 @@ import { MenuInicialComponent } from './menu-inicial/menu-inicial.component';
 import { PptComponent } from './ppt/ppt.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { Page404Component } from './page404/page404.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuInicialComponent,
-    PptComponent
+    PptComponent,
+    LandingPageComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,

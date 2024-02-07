@@ -4,11 +4,15 @@ import { PptComponent } from './ppt/ppt.component';
 import { MenuInicialComponent } from './menu-inicial/menu-inicial.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { Page404Component } from './page404/page404.component';
+import { DesarrolladorComponent } from './desarrollador/desarrollador.component';
+import { InfoComponent } from './info/info.component';
 
 const routes: Routes = [
-  {path: '', component: LandingPageComponent},
+  {path: '', component: MenuInicialComponent},
   {path: 'piedra-papel-tijera', component: PptComponent},
   {path: 'menu-inicial', component: MenuInicialComponent},
+  {path: 'desarrollador', component: DesarrolladorComponent},
+  {path: 'info', component: InfoComponent},
   {path: '**', component: Page404Component}
 ];
 

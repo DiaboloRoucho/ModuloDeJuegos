@@ -13,10 +13,13 @@ body{
     animation: aparicion .5s;
 }
 .contenedor{
-    height: 150px;
-    width: 50%;
+    height: 50px;
+    width: 100px;
+    border-radius: 15px;
     background-color: purple;
     justify-content: center;
+    display: flex;
+    align-items: center;
     
 }
 .contenedor:hover{

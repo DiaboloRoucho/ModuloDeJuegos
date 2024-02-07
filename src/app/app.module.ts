@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { Page404Component } from './page404/page404.component';
+import { DesarrolladorComponent } from './desarrollador/desarrollador.component';
+import { InfoComponent } from './info/info.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { Page404Component } from './page404/page404.component';
     MenuInicialComponent,
     PptComponent,
     LandingPageComponent,
-    Page404Component
+    Page404Component,
+    DesarrolladorComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

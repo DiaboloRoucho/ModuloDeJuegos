@@ -12,23 +12,41 @@ body{
     align-items: center;
     animation: aparicion .5s;
 }
+mat-toolbar{
+    height: .7vh;
+}
 .contenedor{
     height: 50px;
     width: 100px;
     border-radius: 15px;
-    background-color: purple;
+    background-color: darkgreen;
     justify-content: center;
     display: flex;
     align-items: center;
+    cursor: pointer;
+}
+.jugar{
+    width: 70%;
+    height: fit-content;
+    background-color: dimgray;
+}
+img{
+    width: 300px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.juegos{
+    flex-direction: row;
     
 }
-.contenedor:hover{
-    animation: seleccion .5s forwards;
-}
-.salir{
-    height: 50px;
-    width: 100px;
-    border-radius: 15px;
+.boton{
+   width: fit-content;
+   height: fit-content;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
 }
 @keyframes seleccion{
     50%{

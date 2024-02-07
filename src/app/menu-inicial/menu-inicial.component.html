@@ -1,8 +1,30 @@
 <body>
 <div class="pagina">
-    <div class="contenedor jugar">jugar</div>
-    <div class="contenedor info">info</div>
-    <div class="contenedor desarrollador">desarrollador</div>
+    <div class="contenedor jugar">
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+            <mat-tab class="juegos" label="P-P-T">
+                <div class="boton ppt">
+                <img src="/assets/Captura ppt.png">
+                <div class="contenedor" routerLink="piedra-papel-tijera">Jugar</div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Tres en raya">
+                <div class="boton ppt">
+                    <img src="/assets/Captura ppt.png">
+                    <div class="contenedor" routerLink="tres-en-raya">Jugar</div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Third">
+                <div class="boton ppt">
+                    <img src="/assets/Captura ppt.png">
+                    <div class="contenedor" routerLink="piedra-papel-tijera">Jugar</div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+          
+    </div>
+    <div class="contenedor info" routerLink="info">info</div>
+    <div class="contenedor desarrollador" routerLink="desarrollador">desarrollador</div>
     <div class="contenedor version">version</div>
     <div class="contenedor salir">Salir</div>
 </div>

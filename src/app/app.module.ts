@@ -11,6 +11,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { Page404Component } from './page404/page404.component';
 import { DesarrolladorComponent } from './desarrollador/desarrollador.component';
 import { InfoComponent } from './info/info.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { TresEnRayaComponent } from './tres-en-raya/tres-en-raya.component';
+
 
 
 @NgModule({
@@ -21,13 +24,15 @@ import { InfoComponent } from './info/info.component';
     LandingPageComponent,
     Page404Component,
     DesarrolladorComponent,
-    InfoComponent
+    InfoComponent,
+    TresEnRayaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

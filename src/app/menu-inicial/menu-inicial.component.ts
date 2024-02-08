@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class MenuInicialComponent {
 
+  //@input() saludo | undefined; <-- esto es pa recoger la variable y nombrarla
 }

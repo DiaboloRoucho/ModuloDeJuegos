@@ -13,6 +13,7 @@ import { DesarrolladorComponent } from './desarrollador/desarrollador.component'
 import { InfoComponent } from './info/info.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { TresEnRayaComponent } from './tres-en-raya/tres-en-raya.component';
+import { TERConsolaComponent } from './ter-consola/ter-consola.component';
 
 
 
@@ -25,7 +26,8 @@ import { TresEnRayaComponent } from './tres-en-raya/tres-en-raya.component';
     Page404Component,
     DesarrolladorComponent,
     InfoComponent,
-    TresEnRayaComponent
+    TresEnRayaComponent,
+    TERConsolaComponent,
   ],
   imports: [
     BrowserModule,

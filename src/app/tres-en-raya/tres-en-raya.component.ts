@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./tres-en-raya.component.css']
 })
 export class TresEnRayaComponent {
+  datosDelHijo:String="";
+recibirDatos (datos:string){
 
+  this.datosDelHijo = datos;
+}
+  
 }

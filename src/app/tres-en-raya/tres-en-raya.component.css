@@ -1,0 +1,36 @@
+.contenedor{
+    width: 100vw;
+    height: 93.3vh;
+    background-color: dimgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.imagenes{
+    width: 300px;
+    height: 200px;
+    flex-direction: row;
+    border-radius: 15px;
+}
+img{
+    width: 50px;
+    height: 50px;
+    animation: parpadeo 1s infinite;
+}
+img:hover{
+    animation: seleccion .5s forwards;
+}
+@keyframes parpadeo{
+    40%{
+        transform: scale(1.05);
+    }
+}
+@keyframes seleccion{
+    50%{
+        transform: scale(2.5);
+    }
+    100%{
+        transform: scale(2);
+    }
+}

@@ -8,8 +8,9 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'ModuloDeJuegos';
-  rutasAleatorias:String[] = [
-    "/piedra-papel-tijera",
+  nombreDeUsuario:string = "Andrés"
+  rutasAleatorias:string[] = [
+    "/piedra-papel-tijera/:nick",
     "/menu-inicial",
     "",
     "/kdnskjsndafknasdkfnksdanfkjsn"

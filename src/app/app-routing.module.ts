@@ -10,7 +10,7 @@ import { TresEnRayaComponent } from './tres-en-raya/tres-en-raya.component';
 
 const routes: Routes = [
   {path: '', component: MenuInicialComponent},
-  {path: 'piedra-papel-tijera', component: PptComponent},
+  {path: 'piedra-papel-tijera/:nick', component: PptComponent},
   {path: 'menu-inicial/piedra-papel-tijera', component: PptComponent},
   {path: 'menu-inicial/tres-en-raya', component: TresEnRayaComponent},
   {path: 'menu-inicial', component: MenuInicialComponent},

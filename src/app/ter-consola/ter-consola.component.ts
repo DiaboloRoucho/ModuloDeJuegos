@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-ter-consola',
@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class TERConsolaComponent {
 
+  @Output() datosEnviados = new EventEmitter<string>();
+
+  enviarDatos(){
+    this.datosEnviados.emit("he seleccionado el personaje ");
+  }
 }

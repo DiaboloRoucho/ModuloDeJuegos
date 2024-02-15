@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-ppt',
@@ -13,16 +14,24 @@ export class PptComponent implements OnInit{
   textoM:string="";
   textoF:string="";
   textoEmp:String="";
+  nombre:String="";
   vidasJ:vida[]=[new vida("/assets/heart_707680.png"),
   new vida("/assets/heart_707680.png"), 
   new vida("/assets/heart_707680.png"), 
   new vida("/assets/heart_707680.png"), 
   new vida("/assets/heart_707680.png")];
   vidasM:vida[]=[];
+  constructor(private route:ActivatedRoute){
+
+  }
   
 
   ngOnInit(): void {
-    this.texto="hola guapo";
+  
+    this.route.params.subscribe(
+      params=>{this.nombre = params['nick']}
+    )
+    this.texto="Hola " + this.nombre;
     this.textoJ="/assets/waving-hand_9756304.png"
     this.textoM="/assets/waving-hand_9756304.png"
     this.textoEmp=""

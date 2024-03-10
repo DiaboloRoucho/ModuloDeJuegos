@@ -13,6 +13,7 @@ const routes: Routes = [
   {path: 'piedra-papel-tijera/:nick', component: PptComponent},
   {path: 'menu-inicial/piedra-papel-tijera', component: PptComponent},
   {path: 'menu-inicial/tres-en-raya', component: TresEnRayaComponent},
+  {path: 'tres-en-raya', component: TresEnRayaComponent},
   {path: 'menu-inicial', component: MenuInicialComponent},
   {path: 'menu-inicial/desarrollador', component: DesarrolladorComponent},
   {path: 'menu-inicial/info', component: InfoComponent},

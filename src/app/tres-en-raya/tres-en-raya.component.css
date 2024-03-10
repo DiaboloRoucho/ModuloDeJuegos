@@ -12,6 +12,7 @@
     height: 200px;
     flex-direction: row;
     border-radius: 15px;
+    font-size: 60px;
 }
 img{
     width: 50px;

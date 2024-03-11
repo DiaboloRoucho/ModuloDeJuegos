@@ -16,8 +16,9 @@ export class TERConsolaComponent implements OnInit{
   "/assets/punto.png",
   "/assets/punto.png",
   "/assets/punto.png"];
-  resultado:string=""
+  resultado:string="";
   eleccionM:number=0;
+  bufer:number[]=[];
   ngOnInit(): void {
     this.resultado = "Holaa!!"
     this.enviarDatos(this.resultado);
@@ -26,7 +27,7 @@ export class TERConsolaComponent implements OnInit{
  seleccion(x:number){
   do
   this.eleccionM = Math.round(Math.random()*8);
-  while(x == this.eleccionM)
+  while(this.posiciones[x] != "/assets/punto.png"&& "/assets/o.png"!=this.posiciones[x] )
   this.posiciones[x]="/assets/o.png";
   this.posiciones[this.eleccionM]="/assets/x.png";
   if(
@@ -53,9 +54,6 @@ export class TERConsolaComponent implements OnInit{
     this.enviarDatos(this.resultado);}
   } 
   
-  
-
-
   
 
   @Output() datosEnviados = new EventEmitter<string>();

@@ -7,6 +7,7 @@ import { Page404Component } from './page404/page404.component';
 import { DesarrolladorComponent } from './desarrollador/desarrollador.component';
 import { InfoComponent } from './info/info.component';
 import { TresEnRayaComponent } from './tres-en-raya/tres-en-raya.component';
+import { PointclickComponent } from './pointclick/pointclick.component';
 
 const routes: Routes = [
   {path: '', component: MenuInicialComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'menu-inicial', component: MenuInicialComponent},
   {path: 'menu-inicial/desarrollador', component: DesarrolladorComponent},
   {path: 'menu-inicial/info', component: InfoComponent},
+  {path: 'menu-inicial/pt', component: PointclickComponent},
   {path: '**', component: Page404Component}
 ];
 

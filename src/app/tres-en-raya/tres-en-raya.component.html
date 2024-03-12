@@ -1,6 +1,6 @@
 <div class="contenedor general">
-<app-ter-consola (datosEnviados)="recibirDatos($event)" [vjugar]="volver"></app-ter-consola>
-<div class="contenedor rejugar">
+<app-ter-consola (datosEnviados)="recibirDatos($event)"></app-ter-consola>
+<div class="contenedor rejugar" (click)="limpiar">
     {{rejugar}}
 </div>
 <div class="contenedor resultado">

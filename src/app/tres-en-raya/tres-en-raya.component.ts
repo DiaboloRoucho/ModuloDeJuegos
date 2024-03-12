@@ -18,7 +18,7 @@ recibirDatos (datos:string){
   
 }
 limpiar(){
-  this.volver=true
+  window.location.reload();
 }
   
 }

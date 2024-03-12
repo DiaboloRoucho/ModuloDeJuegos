@@ -21,6 +21,19 @@ export class TERConsolaComponent implements OnInit{
   contador:number=0;
   contador2:number=0
   ngOnInit(): void {
+    this.posiciones=[
+      "/assets/punto.png",
+      "/assets/punto.png",
+      "/assets/punto.png",
+      "/assets/punto.png",
+      "/assets/punto.png",
+      "/assets/punto.png",
+      "/assets/punto.png",
+      "/assets/punto.png",
+      "/assets/punto.png"];
+      this.resultado="";
+      this.eleccionM=0;
+      this.contador=0;
     this.resultado = "Holaa!!"
     this.enviarDatos(this.resultado);
   }
@@ -52,16 +65,14 @@ export class TERConsolaComponent implements OnInit{
       this.posiciones[0]==this.posiciones[3]&&this.posiciones[0]==this.posiciones[6]&&this.posiciones[0]=="/assets/x.png"||
       this.posiciones[1]==this.posiciones[4]&&this.posiciones[1]==this.posiciones[7]&&this.posiciones[1]=="/assets/x.png"||
       this.posiciones[2]==this.posiciones[5]&&this.posiciones[2]==this.posiciones[8]&&this.posiciones[2]=="/assets/x.png"){
-    this.resultado="Perdiste"
+    this.resultado="Perdiste";
     this.enviarDatos(this.resultado);
     }
-  } 
+    this.limpiar(this.vjugar);
+  }
   limpiar(x:boolean){
     if(x)
-      while(this.contador2<=8){
-    this.posiciones[this.contador2]="/assets/punto.png";
-    this.contador2++;}
-    this.contador2=0;
+     this.ngOnInit();
   }
   
 

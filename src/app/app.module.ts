@@ -14,6 +14,9 @@ import { InfoComponent } from './info/info.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { TresEnRayaComponent } from './tres-en-raya/tres-en-raya.component';
 import { TERConsolaComponent } from './ter-consola/ter-consola.component';
+import { PointclickComponent } from './pointclick/pointclick.component';
+import { PantallapcComponent } from './pantallapc/pantallapc.component';
+
 
 
 
@@ -28,6 +31,8 @@ import { TERConsolaComponent } from './ter-consola/ter-consola.component';
     InfoComponent,
     TresEnRayaComponent,
     TERConsolaComponent,
+    PointclickComponent,
+    PantallapcComponent,
   ],
   imports: [
     BrowserModule,

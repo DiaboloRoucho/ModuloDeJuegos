@@ -1,0 +1,40 @@
+.contenedor{
+    width: 800px;
+    height: 600px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.linea{
+    width: 100%;
+    height: 100px;
+    flex-direction: row;
+}
+.columna{
+    width: 100px;
+    height: 100px;
+}
+.objeto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+img{
+    height: 50px;
+    width: 50px;
+}
+.objeto:hover{
+    cursor: pointer;
+    animation: seleccion .5s forwards;
+}
+@keyframes seleccion{
+    50%{
+        transform: scale(2.5);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}

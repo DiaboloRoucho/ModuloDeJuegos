@@ -1,0 +1,13 @@
+.contenedor{
+    width: 100vw;
+    height: 93.3vh;
+    background-color: dimgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+p{
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

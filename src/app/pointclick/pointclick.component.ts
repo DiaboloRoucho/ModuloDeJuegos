@@ -16,8 +16,6 @@ export class PointclickComponent {
     this.volv="Volver a jugar"
   }
   volverjugar(){
-    this.volver = true;
-    this.res="";
-    this.volv = "";
-  }
+    location.reload();
+}
 }

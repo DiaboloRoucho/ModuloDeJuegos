@@ -8,7 +8,10 @@
     align-items: center;
 }
 .resultado{
-    width: fit-content;
-    height: fit-content;
-    font-size: 70px;
+    height: 100px;
+    font-size: 40px;
+    flex-direction: row;
+}
+.rejugar:hover{
+    cursor: pointer;
 }

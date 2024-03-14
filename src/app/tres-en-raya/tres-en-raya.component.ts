@@ -7,18 +7,14 @@ import { Component, Input } from '@angular/core';
 })
 export class TresEnRayaComponent {
   datosDelHijo:String="";
-  rejugar:String="";
+
   volver:boolean=false;
 recibirDatos (datos:string){
 
   this.datosDelHijo = datos;
-  if(datos =="Ganaste" || datos == "Perdiste")
-  this.rejugar = "Volver a jugar"
-
-  
 }
 limpiar(){
-  window.location.reload();
+  this.volver = true
 }
   
 }

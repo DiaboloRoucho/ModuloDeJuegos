@@ -8,7 +8,16 @@ import { Component } from '@angular/core';
 export class PointclickComponent {
 
   res:string="";
+  volv:string = "";
+  volver:boolean=false;
   recepcion(valor:string){
     this.res = valor
+    if(valor =="Perdiste")
+    this.volv="Volver a jugar"
+  }
+  volverjugar(){
+    this.volver = true;
+    this.res="";
+    this.volv = "";
   }
 }

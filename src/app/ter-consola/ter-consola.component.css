@@ -7,6 +7,26 @@
     justify-content: space-around;
     align-items: center;
 }
+.general{
+    background-color: dimgray;
+    justify-content: space-between;
+}
+.dos{
+    background-color: dimgray;
+    height: fit-content;
+    width: fit-content;
+}
+.rejugar{
+    width: fit-content;
+    height: 50px;
+    background-color: dimgrey;
+    flex-direction: row;
+    border-radius: 15px;
+    font-size: 40px;
+}
+.rejugar:hover{
+    cursor: pointer;
+}
 .linea{
     width: 100%;
     height: 100px;

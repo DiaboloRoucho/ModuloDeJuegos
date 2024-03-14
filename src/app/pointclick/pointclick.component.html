@@ -1,6 +1,11 @@
 <div class="contenedor principal">
-    <app-pantallapc (resultado)="recepcion($event)"></app-pantallapc>
+    <app-pantallapc (resultado)="recepcion($event)" [v]="volver"></app-pantallapc>
     <div class="contenedor resultado">
+        <div>
         {{res}}
+        </div>
+        <div class="rejugar" (click)="volverjugar()">
+        {{volv}}
+        </div>
     </div>
 </div>

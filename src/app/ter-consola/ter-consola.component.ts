@@ -20,6 +20,7 @@ export class TERConsolaComponent implements OnInit{
   eleccionM:number=0;
   contador:number=0;
   contador2:number=0
+  rejugar:String="";
   ngOnInit(): void {
     this.posiciones=[
       "/assets/punto.png",
@@ -31,6 +32,7 @@ export class TERConsolaComponent implements OnInit{
       "/assets/punto.png",
       "/assets/punto.png",
       "/assets/punto.png"];
+      this.rejugar="";
       this.resultado="";
       this.eleccionM=0;
       this.contador=0;
@@ -44,18 +46,17 @@ export class TERConsolaComponent implements OnInit{
   this.eleccionM = Math.round(Math.random()*8);
   while(this.posiciones[this.eleccionM] != "/assets/punto.png")
   this.posiciones[this.eleccionM]="/assets/x.png";
-  if(
-    this.posiciones[0]==this.posiciones[2]&&this.posiciones[0]==this.posiciones[1]&&this.posiciones[0]=="/assets/o.png"||
-    this.posiciones[3]==this.posiciones[4]&&this.posiciones[3]==this.posiciones[5]&&this.posiciones[3]=="/assets/o.png"||
-    this.posiciones[6]==this.posiciones[7]&&this.posiciones[6]==this.posiciones[8]&&this.posiciones[6]=="/assets/o.png"||
-    this.posiciones[0]==this.posiciones[4]&&this.posiciones[0]==this.posiciones[8]&&this.posiciones[0]=="/assets/o.png"||
-    this.posiciones[6]==this.posiciones[4]&&this.posiciones[6]==this.posiciones[2]&&this.posiciones[6]=="/assets/o.png"||
-    this.posiciones[0]==this.posiciones[3]&&this.posiciones[0]==this.posiciones[6]&&this.posiciones[0]=="/assets/o.png"||
-    this.posiciones[1]==this.posiciones[4]&&this.posiciones[1]==this.posiciones[7]&&this.posiciones[1]=="/assets/o.png"||
-    this.posiciones[2]==this.posiciones[5]&&this.posiciones[2]==this.posiciones[8]&&this.posiciones[2]=="/assets/o.png"){
-    this.resultado="Ganaste";
-    this.enviarDatos(this.resultado);
+  for (let i = 0; i < this.posiciones.length; i++){
+    if(this.posiciones[i] == "/assets/punto.png"){
+      this.contador++
     }
+  }
+  if(this.contador <=1){
+    this.resultado = "Empate";
+    this.enviarDatos(this.resultado);
+    this.rejugar = "Volver a jugar";
+  }
+  this.contador = 0;
     if(
       this.posiciones[0]==this.posiciones[2]&&this.posiciones[0]==this.posiciones[1]&&this.posiciones[0]=="/assets/x.png"||
       this.posiciones[3]==this.posiciones[4]&&this.posiciones[3]==this.posiciones[5]&&this.posiciones[3]=="/assets/x.png"||
@@ -67,17 +68,31 @@ export class TERConsolaComponent implements OnInit{
       this.posiciones[2]==this.posiciones[5]&&this.posiciones[2]==this.posiciones[8]&&this.posiciones[2]=="/assets/x.png"){
     this.resultado="Perdiste";
     this.enviarDatos(this.resultado);
+    this.rejugar = "Volver a jugar";
     }
-    this.limpiar(this.vjugar);
+    if(
+      this.posiciones[0]==this.posiciones[2]&&this.posiciones[0]==this.posiciones[1]&&this.posiciones[0]=="/assets/o.png"||
+      this.posiciones[3]==this.posiciones[4]&&this.posiciones[3]==this.posiciones[5]&&this.posiciones[3]=="/assets/o.png"||
+      this.posiciones[6]==this.posiciones[7]&&this.posiciones[6]==this.posiciones[8]&&this.posiciones[6]=="/assets/o.png"||
+      this.posiciones[0]==this.posiciones[4]&&this.posiciones[0]==this.posiciones[8]&&this.posiciones[0]=="/assets/o.png"||
+      this.posiciones[6]==this.posiciones[4]&&this.posiciones[6]==this.posiciones[2]&&this.posiciones[6]=="/assets/o.png"||
+      this.posiciones[0]==this.posiciones[3]&&this.posiciones[0]==this.posiciones[6]&&this.posiciones[0]=="/assets/o.png"||
+      this.posiciones[1]==this.posiciones[4]&&this.posiciones[1]==this.posiciones[7]&&this.posiciones[1]=="/assets/o.png"||
+      this.posiciones[2]==this.posiciones[5]&&this.posiciones[2]==this.posiciones[8]&&this.posiciones[2]=="/assets/o.png"){
+      this.resultado="Ganaste";
+      this.enviarDatos(this.resultado);
+      this.rejugar = "Volver a jugar";
+      }
+
+    
+    
   }
-  limpiar(x:boolean){
-    if(x)
-     this.ngOnInit();
+  limpiar(){
+    this.ngOnInit();
   }
   
 
   @Output() datosEnviados = new EventEmitter<string>();
-  @Input() vjugar:boolean = false;
 
   enviarDatos(valor:string){
     this.datosEnviados.emit(valor);
